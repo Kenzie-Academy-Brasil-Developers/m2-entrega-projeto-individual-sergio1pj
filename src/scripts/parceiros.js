@@ -20,7 +20,7 @@ class Parceiro {
         tipo.innerText = empresa.sectors.description
         descricao.innerText = empresa.description
         horas.innerText = empresa.opening_hours
-        img.src = "";
+        img.src = "/src/assets/companhia.png";
         img.alt = "icon";
         div.append(h3, tipo, descricao, horas)
         li.append(div, img)
