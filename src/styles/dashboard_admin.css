@@ -1,0 +1,374 @@
+body {
+    background-color: var(--color-grey-1);
+}
+header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 80px;
+    background-color: var(--color-primary);
+}
+header img {
+    margin-top: 20px;
+    border-radius: 150px;
+    width: 100px;
+    height: 100px;
+}
+.sair {
+    position: absolute;
+    right: 20px;
+    color: var(--color-mode);
+}
+.menu {
+    height: 140px;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+}
+.lista-empresa {
+    height: 80vh;
+    width: 90%;
+    margin: 20px auto 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+}
+.lista-empresa li {
+    height: 150px;
+    width: 100%;
+    border-radius: 16px;
+    margin: 0px auto;
+    display: flex;
+    box-shadow: 0px 0px 20px  rgb(40, 40, 40, 0.6 );
+    cursor: pointer;
+}
+.lista-empresa li figure {
+    background-color: var(--color-mode);
+    height: 150px;
+    width: 30%;
+    margin: 0;
+    color: var(--color-grey-1);
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    border-radius: 16px 0px 0px 16px;
+    box-shadow: 10px 0px 10px  rgb(40, 40, 40, 0.4 );
+}
+.lista-empresa li figure span {
+    height: 35px;
+    width: 35px;
+    background-color: var(--color-mode);
+    position: absolute;
+    right: 0;
+    z-index: 0;
+    transform: rotate(45deg) translateX(10px) translatey(-10px);
+    box-shadow: 10px -10px 10px  rgb(40, 40, 40, 0.4 );
+}
+.lista-empresa li figure img {
+    width: 75px;
+    z-index: 1;
+    opacity: 80%;
+}
+.lista-empresa .descricao {
+    background-color: var(--color-primary);
+    height: 150px;
+    width: 70%;
+    border-radius: 0px 16px 16px 0;
+    color: var(--color-mode);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    border: 5px 5px 5px 0px solid var(--color-mode);
+}
+.descricao div {
+    margin-left: 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 20px;
+}
+.descricao div h3 {
+    font-size: 1.2rem;
+}
+.descricao1 p {
+    font-size: 14px;
+    line-height: 1.2rem;
+}
+.menu .abrir-menu {
+    font-size: 2rem;
+    position: absolute;
+    left: 20px;
+    top: 5px;
+    border: none;
+    background-color: transparent;
+}
+.pesquisa {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    width: 90%;
+    margin: 80px auto 0 auto;
+
+}
+.pesquisa input {
+    width: 100%;
+    padding: 10px;
+    position: relative;
+    background-color: transparent;
+    border: none;
+    border-bottom: 3px solid var(--color-mode);
+    outline: none;
+    font-size: 1rem;
+    font-weight: 600;
+    color: var(--color-primary);
+}
+.pesquisa input:focus {
+    border-bottom: 3px solid var(--color-primary);
+    transition: 1s ease;
+}
+.pesquisa input:focus ~ label {
+    transform: translateY(-25px);
+    transition: 1s ease;
+    color: var(--color-primary);
+}
+.pesquisa label {
+    position: absolute;
+    left: 10px;
+    bottom: 10px;
+    color: var(--color-grey-2);
+}
+.pesquisa button {
+    position: absolute;
+    right: 0;
+    bottom: 5px;
+    padding: 10px;
+    scale: 1.5;
+    background-color: transparent;
+    border: 2px solid transparent;
+    cursor: pointer;
+}
+.modal-empresa {
+    height: 100vh;
+    width: 100%;
+    background-color: rgb(0, 0, 0, 0.5);
+    position: fixed;
+    top: 0;
+   
+}
+.modal-empresa .modal_div1 {
+    background-color: var(--color-mode);
+    width: 90%;
+    height: 85vh;
+    margin: 50px auto;
+    overflow-y: auto;
+}
+.modal-header {
+    background-color: var(--color-primary);
+    height: 150px;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+}
+.modal-header h2 {
+    color: var(--color-mode);
+    font-size: 2.2rem;
+    margin: 30px auto;
+    width: 80%;
+    text-align: center;
+}
+.modal-header div {
+    background-color: var(--color-primary);
+    height: 100px;
+    width: 100px;
+    position: absolute;
+    bottom: 0;
+    transform: translateY(45px);
+    border-radius: 50%;
+    align-self: center;
+}
+.modal_info {
+    border-bottom: 5px solid  var(--color-primary);
+    height: 200px;
+    margin-top: 50px;
+    display: flex;
+    flex-direction: column;
+    color: var(--color-grey-1);
+    gap: 10px;
+    padding: 0px 20px;
+}
+.modal_info h3 {
+    font-size: 1.6rem;
+    align-self: center;
+}
+.modal_info div .descricao {
+    font-size: 18px;
+    height: 60px;
+    margin-top: 10px;
+}
+.modal_info div span {
+    font-size: 1.2rem;
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+.lista-departamentos {
+    height: 240px;
+    padding: 15px 20px;
+    color: var(--color-grey-1);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+}
+.lista-departamentos ul {
+    height: 220px;
+    width: 100%;
+    display: flex;
+    gap: 25px;
+    overflow: auto;
+}
+.lista-departamentos ul li {
+    border-left: 3px solid var(--color-primary);
+    border-right: 3px solid var(--color-primary);
+    height: 120px;
+    width: 200px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px 5px;
+    text-align: center;
+    gap: 40px;
+    margin-top: 20px;
+}
+.desligado {
+    display: none;
+}
+.menu_admin {
+    position: fixed;
+    top: 0;
+    height: 100vh;
+    width: 100%;
+    background-color: var(--color-mode);
+    z-index: 3;
+}
+.menu_admin ul {
+    width: 90%;
+    height: 90vh;
+    border: 5px solid var(--color-primary);
+    margin: 40px auto;
+    padding: 15px;
+}
+.menu_admin ul li {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+.menu_admin ul li h3 {
+    color: var(--color-grey-1);
+    font-size: 1.2rem;
+}
+.menu_admin ul li div {
+    position: relative;
+    max-width: max-content;
+}
+.menu_admin ul li div img {
+    width: 125px;
+}
+.menu_admin ul li div p {
+    position: absolute;
+    font-size: 40px;
+    top: 0;
+    right: 0;
+}
+.clse_menu {
+    font-size: 32px;
+    font-weight: 600;
+    color: var(--color-mode);
+    background-color: rgb(228, 41, 41);
+    height: 40px;
+    width: 40px;
+    border-radius: 50%;
+    border: none;
+    top: 60px;
+    right: 50px;
+    position: absolute;
+}
+.departamento-pesquisa {
+    position: fixed;
+    top: 0;
+    height: 100vh;
+    width: 100%;
+    background-color: var(--color-mode);
+    z-index: 4;
+    color: var(--color-grey-1);
+}
+.departamento-pesquisa div {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    width: 80%;
+    margin: 50px auto;
+}
+.departamento-pesquisa div select {
+    width: 100%;
+    padding: 10px;
+    border: none;
+    background-color: transparent;
+    font-size: 1rem;
+    outline: none;
+}
+.abrir-menu{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.abrir-menu img {
+    width: 50px;
+    margin: 10px;
+}
+.abrir-menu h3{
+color: var(--color-mode);
+}
+@media (min-width: 1000px){
+   .menu {
+    max-width: 800px;
+    margin: 0 auto;
+   }
+    .lista-empresa {
+        max-width: 1200px;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-around;
+        height: 100%;
+    }
+    .lista-empresa li {
+        width: 40%;
+        margin-bottom: 20px;
+    }
+    .modal-empresa .modal_div1 {
+        max-width: 600px;
+        height: 75vh;
+        padding: 25px;
+        border-radius: 16px;
+    }
+    .modal-header {
+        border-radius: 16px;
+    }
+    .abrir-menu {
+        position: absolute;
+        right: 60px;
+        top: 120px;
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        color: var(--color-grey-2);
+        font-size: 1.4rem;
+    }
+    .abrir-menu img {
+        width: 100px;
+    }
+}
