@@ -72,7 +72,7 @@ main {
     width: 90%;
     height: 90%;
     max-height: 800px;
-    background-color: var(--color-grey-6);
+    background-color: var(--color-mode);
     justify-content: center;
     border-radius: 16px;
     gap: 50px;
