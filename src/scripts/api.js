@@ -29,7 +29,7 @@ export class Api {
         .then(resp => resp.json())
         .then(resp => {
             if(resp.error){
-                Toast.create(resp.error, 'rgb(200, 30, 30)')
+                Toastify.criarToast(resp.error, 'rgb(200, 30, 30)')
             }
             return resp
         })
@@ -188,13 +188,13 @@ export class Api {
         })
         .catch(err => console.log(err))
        if(atualizado.uuid) {
-            Toast.create("Atualizado com sucesso!", 'rgb(30, 200, 30)')
+        Toastify.criarToast("Atualizado com sucesso!", 'rgb(30, 200, 30)')
             setTimetout(() => {
                 document.location.reload(true)
             }, 2500)
            
         } else {
-            Toast.create(atualizado.error, 'rgb(200, 30, 30)')
+            Toastify.criarToast(atualizado.error, 'rgb(200, 30, 30)')
         }
         return atualizado
     }
@@ -239,14 +239,14 @@ export class Api {
         })
         .then(resp => resp.json())
         .then(resp => {
-            Toast.create("Atualizado com sucesso", 'rgb(30, 200, 30)')
+            Toastify.criarToast("Atualizado com sucesso", 'rgb(30, 200, 30)')
             setTimeout(() => {
                 document.location.reload(true)
             }, 2500);
             return resp
         })
         .catch(err => {
-            Toast.create(err, 'rgb(200, 30, 30)')
+            Toastify.criarToast(err, 'rgb(200, 30, 30)')
             console.log(err)
         })
         return atualizado
