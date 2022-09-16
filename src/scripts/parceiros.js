@@ -1,10 +1,10 @@
 import { Api } from "../scripts/api.js";
-const lista = document.querySelector ('ul')
+const lista = document.querySelector('ul')
 class Parceiro {
     static async listar(){
         const resultado = await Api.listarEmpresas()
         resultado.forEach(empresa => {
-            const card = this.criarCard(empresa)
+            const card = Parceiro.criarCard(empresa)
             lista.append(card)
         });
     }
@@ -26,5 +26,24 @@ class Parceiro {
         li.append(div, img)
         return li
     }
+    static async filtrar(){
+        const btn = document.querySelector('input');
+        btn.addEventListener('click', async (event) => {
+            event.preventDefault();
+            const filtro = document.querySelector('select').value;
+            const resultado = await Api.listarEmpresas();
+            if(resultado[0]){
+                const filtrado = resultado.filter(empresa => empresa.sectors.description === filtro)
+                lista.innerHTML = ''
+                await filtrado.forEach(empresa => {
+                    const card = Parceiro.criarCard(empresa)
+                    lista.append(card)
+                });
+            }
+        })
+    }  
+  
 }
-Parceiro.listar()
+Parceiro.listar();
+Parceiro.filtrar();
+
