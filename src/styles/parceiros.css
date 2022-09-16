@@ -1,0 +1,105 @@
+body {
+    background-color: black;
+}
+.filtro-parceiro {
+    height: 90vh;
+    width: 90%;
+    max-width: 600px;
+    margin: 40px auto 0px auto;
+    border-radius: 16px;
+    overflow-y: scroll;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+.filtro-parceiro::-webkit-scrollbar {
+    display: none;
+}
+.menu {
+    padding: 30px 15px;
+    gap: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    position: relative;
+    background-color: var(--color-mode);
+}
+.botao-parceiro {
+    color: var(--primary);
+    font-size: 30px;
+    position: absolute;
+    font-weight: 700;
+    top: 10px;
+}
+.menu h1 {
+    color: var(--primary);
+    align-self: center;
+    font-size: 1.6rem;
+}
+.menu select {
+    border: none;
+    padding: 8px;
+    border-radius: 10px;
+    border: 4px solid var(--primary);
+    outline: none;
+    font-size: 1rem;
+    font-weight: bold;
+    color: var(--primary);
+}
+.menu select:optional{
+    font-size: 1rem;
+}
+.menu input {
+    padding: 8px;
+    border-radius: 10px;
+    border: 4px solid var(--primary);
+    outline: none;
+    cursor: pointer;
+    font-size: 1rem;
+    font-weight: bold;
+    color: var(--primary);
+}
+.lista-parceiro {
+    position: relative;  
+}
+.lista-parceiro ul {
+    max-height: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+.lista-parceiro ul li {
+    display: flex;
+    height: 150px;
+    justify-content: space-between;
+    padding: 15px;
+    align-items: center;
+    background-color: var(--color-mode);
+}
+.lista-parceiro ul li div {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+.lista-parceiro ul li div p {
+    font-size: 0.8rem;
+}
+.company_description {
+    line-height: 1.2rem;
+    height: 50px;
+}
+.lista-parceiro ul li img {
+    width: 75px;
+}
+@media (min-width: 768px){
+    .lista-parceiro ul li {
+        border-bottom: 0px solid var(--primary);
+    }
+    .filtro-parceiro {
+        height: 70vh;
+        margin: 100px auto;
+    }
+    .menu select:optional {
+        font-size: 1.2rem;
+    }
+}
