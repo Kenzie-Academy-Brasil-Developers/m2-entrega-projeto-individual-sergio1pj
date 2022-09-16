@@ -1,4 +1,4 @@
-export class Toastify {
+export class Toast {
     static criarToast(mensagem, color) {
         Toastify({
             text: mensagem,

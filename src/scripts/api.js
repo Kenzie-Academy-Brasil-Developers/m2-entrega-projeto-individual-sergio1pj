@@ -1,4 +1,4 @@
-import { Toastify } from "./toastify.js";
+import { Toast } from "./toastify.js";
 export class Api {
     static token = localStorage.getItem("@kenzieCorp:token");
     static headers = {
@@ -29,7 +29,7 @@ export class Api {
         .then(resp => resp.json())
         .then(resp => {
             if(resp.error){
-                Toastify.criarToast(resp.error, 'rgb(200, 30, 30)')
+                Toast.criarToast(resp.error, 'rgb(200, 30, 30)')
             }
             return resp
         })
@@ -188,13 +188,13 @@ export class Api {
         })
         .catch(err => console.log(err))
        if(atualizado.uuid) {
-        Toastify.criarToast("Atualizado com sucesso!", 'rgb(30, 200, 30)')
+        Toast.criarToast("Atualizado com sucesso!", 'rgb(30, 200, 30)')
             setTimetout(() => {
                 document.location.reload(true)
             }, 2500)
            
         } else {
-            Toastify.criarToast(atualizado.error, 'rgb(200, 30, 30)')
+            Toast.criarToast(atualizado.error, 'rgb(200, 30, 30)')
         }
         return atualizado
     }
@@ -239,14 +239,14 @@ export class Api {
         })
         .then(resp => resp.json())
         .then(resp => {
-            Toastify.criarToast("Atualizado com sucesso", 'rgb(30, 200, 30)')
+            Toast.criarToast("Atualizado com sucesso", 'rgb(30, 200, 30)')
             setTimeout(() => {
                 document.location.reload(true)
             }, 2500);
             return resp
         })
         .catch(err => {
-            Toastify.criarToast(err, 'rgb(200, 30, 30)')
+            Toast.criarToast(err, 'rgb(200, 30, 30)')
             console.log(err)
         })
         return atualizado
