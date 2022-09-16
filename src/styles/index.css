@@ -14,7 +14,7 @@ main {
     display: flex;
     flex-direction: column;
     align-items: center;
-    background-color: var(--color-mode);
+    background-color: var(--color-primary);
     height: 40%;
     width: 100%;
     gap: 30px;
@@ -52,23 +52,23 @@ main {
 }
 .login h2 {
     font-size: var(--font-size-title-2);
-    color: var(--color-mode);
+    color: var( --color-grey-1);
 }
 .container {
     display: flex;
     flex-direction: column;
-    gap: 10px;
+    gap: 20px;
     color: var(--color-grey-3);
 }
 .container a {
     font-size: var(--font-size-text-3);
-    cursor: pointer;
 }
 .container a:hover {
     color: var(--color-primary);
 }
 .registrar {
     position:absolute;
+    display:flex;
     top: 20px;
     width: 90%;
     height: 90%;
@@ -78,7 +78,7 @@ main {
     border-radius: 16px;
     gap: 50px;
     animation: modal 1s ease;
-    transform: translateY(0%);
+    transform: translateY(0px);
 }
 .registrar div {
     color: var(--color-grey-2);
@@ -88,7 +88,6 @@ main {
 }
 .registrar .botoes span b{
     color: var(--color-grey-1);
-    cursor: pointer;
 }
 .registrar h2 {
     color: var(--color-grey-1);
@@ -164,9 +163,11 @@ main {
 }
 @keyframes modal {
     0% {
+        opacity: 0;
         transform: translateY(-100%);
     }
     100% {
+        opacity: 1;
         transform: translateY(0%);
     }
 }
@@ -202,7 +203,7 @@ main {
         justify-content: center;
         padding: 20px 40px;
         gap: 40px;
-        transform: translateY(0%);
+        transform: translateY(0px);
     }
     .login h2 {
         font-size: var(--font-size-title-1);
@@ -219,7 +220,7 @@ main {
     .fundo {
         width: 60%;
         height: 100%;
-        border-radius: 0 24px 24px 0;
+        border-radius: 24px 0 0 24px;
         padding: 0 20px;
         gap: 20px; 
         z-index: 1;
@@ -230,14 +231,33 @@ main {
         gap: 20px;
     }
     .registrar  {
-        display: flex;
         top: 0;
         right: 0;
-        color: var(--color-mode);
+        color: var(--color-grey-1);
         background-color: var(--color-grey-6);
         width: 38%;
         height: 100%;
         max-height: 700px;
         z-index: 0;
+    }
+    @keyframes modal {
+        0% {
+            opacity: 0;
+            transform: translateX(-100%);
+        }
+        100% {
+            opacity: 1;
+            transform: translateX(0%);
+        }
+    }
+    @keyframes modal2 {
+        0% {
+            opacity: 1;
+            transform: translateX(0%);
+        }
+        100% {
+            opacity: 0;
+            transform: translateX(-100%);
+        }
     }
 }

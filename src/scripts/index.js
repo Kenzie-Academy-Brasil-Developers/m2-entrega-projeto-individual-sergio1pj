@@ -3,10 +3,10 @@ import { Toast } from "./toastify.js";
 const modal = document.querySelectorAll("[data-modal-control]");
 modal.forEach(elemento => {
     elemento.addEventListener("click", () => {
-    const modal = document.getAttribute("data-modal-control");
-    document.getElementById(value).classList.toggle('esconder-moda')
+    const valor = elemento.getAttribute("data-modal-control");
+    document.getElementById(valor).classList.toggle('esconder-modal')
     setTimeout(() => {
-        document.getElementById(value).classList.toggle('desligado')
+        document.getElementById(valor).classList.toggle('desligado')
     }, 500);
     });
 });
