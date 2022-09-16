@@ -159,7 +159,7 @@ header img {
     top: 0;
    
 }
-.modal-empresa .modal_div1 {
+.modal-empresa .modal-div {
     background-color: var(--color-mode);
     width: 90%;
     height: 85vh;
@@ -349,7 +349,7 @@ color: var(--color-mode);
         width: 40%;
         margin-bottom: 20px;
     }
-    .modal-empresa .modal_div1 {
+    .modal-empresa .modal-div {
         max-width: 600px;
         height: 75vh;
         padding: 25px;
