@@ -83,12 +83,6 @@ main {
 .registrar div {
     color: var(--color-grey-2);
 }
-.registrar .botoes span {
-    color: var(--color-grey-2);
-}
-.registrar .botoes span b{
-    color: var(--color-grey-1);
-}
 .registrar h2 {
     color: var(--color-grey-1);
 }
@@ -144,6 +138,9 @@ main {
     font-size: var(--font-size-text-3);
     color: var(--color-grey-3);
     margin: 0 auto;
+}
+.botoes span b {
+    color: var(--color-primary);
 }
 .desligado {
     display: none;
@@ -208,14 +205,17 @@ main {
     .login h2 {
         font-size: var(--font-size-title-1);
     }
-    .butoes button, .butoes span {
+    .botoes button, .butoes span {
         font-size: var(--font-size-text-1);
     }
-    .butoes button {
+    .botoes button {
         cursor: pointer;
     }
-    .butoes span {
+    .botoes span {
         color: var(--color-grey-2);
+    }
+    .botoes span b {
+        color: var(--color-primary);
     }
     .fundo {
         width: 60%;
