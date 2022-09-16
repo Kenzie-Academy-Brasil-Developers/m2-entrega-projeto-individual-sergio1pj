@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>KenzieCorp</title>
+    <link rel="stylesheet" type="text/css" href="toasty">
+    <script defer type="text/javascript" src="toasty"></script>
+    <link rel="stylesheet" href="./src/styles/global.css">
+    <link rel="stylesheet" href="./src/styles/index.css">
+</head>
+<body>
+    <main>
+        <section class="fundo">
+            <img class="logo" src="./src/assets/img/" alt="KenzieCorp">
+            <div>
+                <span>       
+                    <a href="./src/pages/"><button>Parceiros</button></a>
+                </span>
+            </div>
+        </section>
+        <section class="login">
+            <h2>Entrar na KenzieCorp</h2>
+            <div class="container">
+                <span class="grupo-input">
+                    <input required id="login-email" type="text">
+                    <label for="login-email">Email</label>
+                </span>
+                <div class="grupo-input">
+                    <input required id="login-senha" type="password">
+                    <label for="login-senha">Senha</label>
+                </div>
+                <a>Esqueceu a senha?</a>
+            </div>
+            <div class="botoes">
+                <button id="botao-entrar">Entrar</button>
+                <span> Novo aqui? <b data-modal-control="modal-registro">Criar nova conta!</b></span>
+            </div>
+        </section>
+        <section id="modal-registro" class="login registrar display-desligado esconder-modal ">
+            <h2>Cadastro</h2>
+            <div class="container">
+                <span class="grupo-input">
+                    <input required id="registro-nome" type="text">
+                    <label for="user_name">Nome</label>
+                </span>
+                <span class="grupo-input">
+                    <input required id="registro-email" type="email">
+                    <label for="registro-email">Email</label>
+                </span>
+                <div class="grupo-input">
+                    <input required id="registro_senha" type="password">
+                    <label for="registro_senha">Senha</label>
+                </div>
+                <div class="grupo-input">
+                    <select name="" id="nivel">
+                        <option value="estágio">Estágio</option>
+                        <option value="júnior">Júnior</option>
+                        <option value="pleno">Pleno</option>
+                        <option value="sênior">Sênior</option>
+                    </select>
+                </div>
+            </div>
+            <div class="botoes">
+                <button id="botao-cadastrar">Cadastre-se!</button>
+                <span> Já tem uma conta? <b data-modal-control="modal-registro">Faça login!</b></span>
+            </div>
+        </section>
+    </main>
+    <script type="module" src="./src/scripts/index.js"></script>
+</body>
+</html>
