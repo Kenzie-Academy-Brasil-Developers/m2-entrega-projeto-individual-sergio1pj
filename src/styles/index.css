@@ -1,5 +1,5 @@
 body {
-    background-color: black;
+    background-color: var(--color-grey-1);
 }
 main {
     display: flex;

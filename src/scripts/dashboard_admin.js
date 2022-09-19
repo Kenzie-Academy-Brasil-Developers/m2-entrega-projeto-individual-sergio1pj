@@ -28,7 +28,7 @@ class Admin {
         p2.innerText = empresa.description
         img.src = "../assets/companhia.png"
         img.alt = 'icone'
-        div2.classList = "description"
+        div2.classList = "descricao"
         li.addEventListener('click', async (event) => {
             this.abrirModal(empresa)
         })
