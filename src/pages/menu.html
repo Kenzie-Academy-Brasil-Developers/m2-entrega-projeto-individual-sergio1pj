@@ -13,27 +13,27 @@
 <body>
     <section class="container">
         <ul>
-            <a href="./dashboard_admin.html" class="back">⇦</a>
+            <a href="./dashboard_admin.html" class="voltar">⇦</a>
             <li data-modal-control ='departamento' class="departamento">
                 <div>
                     <img src="" alt="Filtrar departamento">
                 </div>
                 <h3>Buscar Departamento</h3>
             </li>
-            <li id="btn_list_user" data-modal-control ='user_list' class="user">
+            <li id="botao_lista_usuario" data-modal-control ='lista-usuario' class="usuario">
                 <div>
                     <img src="" alt="icone">
                 </div>
                 <h3>Lista de Usuários</h3>
             </li>
-            <li data-modal-control ='contrato_user' class="demitir">
+            <li data-modal-control ='contrato_usuario' class="demitir">
                 <div>
                     <img src="" alt="icone">
                     
                 </div>
                 <h3>Contratos</h3>
             </li>
-            <li data-modal-control ='company_list'>
+            <li data-modal-control ='lista-parceiro'>
                 <div>
                     <img src="" alt="icone">
                 </div>
@@ -41,17 +41,17 @@
             </li>
         </ul>
     </section>
-    <section id='departamento' class="modal displayOff">
-        <div class="modal_header">
+    <section id='departamento' class="modal desligado">
+        <div class="modal-header">
             <h2>Departamentos</h2>
             <p data-close-control = 'departamento'>X</p>
         </div>
-        <div class="buttons">
-            <div data-modal-control = 'add_departamento' class="adicionar_departamento">
+        <div class="botoes">
+            <div data-modal-control = 'add-departamento' class="adicionar-departamento">
                 <button>+</button>
                 <p>Criar</p>
             </div>
-            <div data-modal-control = 'remove_departamento' class="excluir_departamento">
+            <div data-modal-control = 'remove_departamento' class="excluir-departamento">
                 <button>-</button>
                 <p>Excluir</p>
             </div>
@@ -69,11 +69,11 @@
                 <option selected disabled>Departamento</option>
             </select>
         </div>
-        <div class="btn_filtro">
+        <div class="botao-filtro">
             <button>Buscar</button>
         </div>
-        <div class="lista_de_departamento">
-            <span class="span_grey">
+        <div class="lista-de-departamento">
+            <span class="span-cinza">
                 <h3 >Departamento:</h3>
                 <h3 id="namee"></h3>
             </span>
@@ -81,7 +81,7 @@
                 <h3>ID:</h3>
                 <p id="id"></p>
             </span>
-            <span class="span_grey">
+            <span class="span-cinza">
                 <h3>Descrição:</h3>
                 <p id="descricao"></p>
             </span>
@@ -91,12 +91,12 @@
             </span>
         </div>
     </section>
-    <section id='add_departamento' class="modal add_departamento displayOff">
-        <div class="modal_header">
+    <section id='add-departamento' class="modal add-departamento desligado">
+        <div class="modal-header">
             <h2> Adicionar Departamentos</h2>
-            <p data-close-control = 'add_departamento'>X</p>
+            <p data-close-control = 'add-departamento'>X</p>
         </div>
-        <section class="section_input">
+        <section class="section-input">
             <div>
                 <input required type="text" name="" id="departamento_nome">
                 <label z for="departamento_nome">Nome do departamento</label>
@@ -106,18 +106,18 @@
                 <label for="departamento_descricao">Descrição do departamento</label>
             </div> 
             <div>
-                <select name="" id="add_departamento_id">
+                <select name="" id="add-departamento_id">
                     <option selected disabled value="">Empresa</option>
                 </select>
-                <button id="btn_criar_departamento">Criar</button>
+                <button id="botao-criar-departamento">Criar</button>
             </div>
-            <div class="add_repartamento_result">
+            <div class="add-departamento-resultado">
                 <p class="result"></p>
             </div>
         </section>
     </section>
-    <section id='remove_departamento' class="modal displayOff">
-        <div class="modal_header">
+    <section id='remove_departamento' class="modal desligado">
+        <div class="modal-header">
             <h2>Remover departamentos</h2>
             <p data-close-control = 'remove_departamento'>X</p>
         </div>
@@ -135,14 +135,14 @@
                 
             </select>
         </div>
-        <div class="btn_deletar_departamento">
+        <div class="botao-deletar-departamento">
             <button>Deletar</button>
         </div>
     </section>
-    <section id='user_list' class="modal displayOff">
-        <div class="modal_header">
+    <section id='lista-usuario' class="modal desligado">
+        <div class="modal-header">
             <h2>Lista de funcionarios</h2>
-            <p data-close-control = 'user_list'>X</p>
+            <p data-close-control = 'lista-usuario'>X</p>
         </div>
         <div class="modal_filtro">
             <h3>Escolha a empresa</h3>
@@ -158,74 +158,71 @@
                 
             </select>
         </div>
-        <div class="btn_deletar_departamento">
-            <button id="btn_user">Todos</button>
+        <div class="botao-deletar-departamento">
+            <button id="botao_usuario">Todos</button>
             <button id="no_department">Sem cargo</button>
-            <button id="btn_filter_user">Filtrar</button>
+            <button id="botao_filter_usuario">Filtrar</button>
         </div>
-        <ul class="user_list"> </ul>
+        <ul class="lista-usuario"> </ul>
     </section>
 
-    <section id='modal_user' class="modal displayOff ">
-        <div class="modal_header">
+    <section id='modal_usuario' class="modal desligado ">
+        <div class="modal-header">
             <h2>Lista de funcionarios</h2>
-            <p data-close-control = 'modal_user'>X</p>
+            <p data-close-control = 'modal_usuario'>X</p>
         </div>
-        <div class="user_info">
-            <div class="user_info">
-                <span>
-                    <h3>Nome:</h3>
-                    <p id="user_name"></p>
-                </span>
-                <span>
-                    <h3>Email:</h3>
-                    <p id="user_email"></p>
-                </span>
-                <span>
-                    <h3>ID:</h3>
-                    <p id="user_id"></p>
-                </span>
-                <span>
-                    <h3>Nivel:</h3>
-                    <p id="user_nivel" ></p>
-                </span>
-                <span>
-                    <h3>Tipo de trabalho:</h3>
-                    <p id="user_tipo"></p>
-                </span>
-                <span>
-                    <h3>admin:</h3>
-                    <p id="user_admin"></p>
-                </span>
-                <span>
-                    <h3>Departamento:</h3>
-                    <p id="user_departamento"></p>
-                </span>
-                <section class="displayOff" id="editar_perfil">
-                    <div>
-                        <select name="" id="modalidade">
-                            <option selected disabled name>Modalidade</option>
-                            <option value="home office">Home office</option>
-                            <option value="presencial">Presencial </option>
-                            <option value="hibrido">Híbrido</option>
-                        </select>
-                        <select name="" id="modalidade_nivel">
-                            <option value="estágio">estágio</option>
-                            <option value="júnior">Júnior</option>
-                            <option value="pleno">Pleno </option>
-                            <option value="sênior">Sênior</option>
-                        </select>
-                        <button id="atualizar_perfil">Atualizar</button>
-                    </div>
-                </section>
-            </div>
+        <div class="info-usuario">
+            <span>
+                <h3>Nome:</h3>
+                <p id="usuario_name"></p>
+            </span>
+            <span>
+                <h3>Email:</h3>
+                <p id="usuario_email"></p>
+            </span>
+            <span>
+                <h3>ID:</h3>
+                <p id="usuario_id"></p>
+            </span>
+            <span>
+                <h3>Nivel:</h3>
+                <p id="usuario_nivel" ></p>
+            </span>
+            <span>
+                <h3>Tipo de trabalho:</h3>
+                <p id="usuario_tipo"></p>
+            </span>
+            <span>
+                <h3>admin:</h3>
+                <p id="usuario_admin"></p>
+            </span>
+            <span>
+                <h3>Departamento:</h3>
+                <p id="usuario_departamento"></p>
+            </span>
+            <section class="desligado" id="editar_perfil">
+                <div>
+                    <select name="" id="modalidade">
+                        <option selected disabled name>Modalidade</option>
+                        <option value="home office">Home office</option>
+                        <option value="presencial">Presencial </option>
+                        <option value="hibrido">Híbrido</option>
+                    </select>
+                    <select name="" id="modalidade_nivel">
+                        <option value="estágio">estágio</option>
+                        <option value="júnior">Júnior</option>
+                        <option value="pleno">Pleno </option>
+                        <option value="sênior">Sênior</option>
+                    </select>
+                    <button id="atualizar_perfil">Atualizar</button>
+                </div>
+            </section>
         </div>
     </section>
-
-    <section id='contrato_user' class="modal displayOff">
-        <div class="modal_header">
+    <section id='contrato_usuario' class="modal desligado">
+        <div class="modal-header">
             <h2> Contratos</h2>
-            <p data-close-control = 'contrato_user'>X</p>
+            <p data-close-control = 'contrato_usuario'>X</p>
         </div>
         <div class="modal_filtro">
             <h3>Escolha a empresa</h3>
@@ -241,56 +238,54 @@
                 
             </select>
         </div>
-        <div  class="input_user_id">
-            <input id="input_user_id" type="text" placeholder="ID do funcionario">
-            
+        <div  class="input-usuario-id">
+            <input id="input-usuario-id" type="text" placeholder="ID do funcionario">
         </div>
-        <div class="btn_contrato">
-            <button id="user_contratar">Contratar</button>
+        <div class="botao-contrato">
+            <button id="usuario-contratar">Contratar</button>
             <p>OU</p>
-            <button id="user_demitir">Demitir</button>
+            <button id="usuario-demitir">Demitir</button>
         </div>
     </section>
-
-    <section id='company_list' class="modal displayOff ">
-        <div class="modal_header">
+    <section id='lista-parceiro' class="modal desligado ">
+        <div class="modal-header">
             <h2>Departamentos</h2>
-            <p data-close-control = 'company_list'>X</p>
+            <p data-close-control = 'lista-parceiro'>X</p>
         </div>
-        <div class="buttons">
-            <div data-modal-control = 'add_company' class="adicionar_departamento">
+        <div class="botoes">
+            <div data-modal-control = 'add_company' class="adicionar-departamento">
                 <button>+</button>
                 <p>Criar</p>
             </div>
         </div>
         <div>
-            <ul class="list_company"> </ul>         
+            <ul class="lista-parceiro"> </ul>         
         </div>
     </section>
-    <section id='add_company' class="modal add_departamento displayOff">
-        <div class="modal_header">
+    <section id='add_company' class="modal add-departamento desligado">
+        <div class="modal-header">
             <h2> Adicionar empresa</h2>
             <p data-close-control = 'add_company'>X</p>
         </div>
-        <section class="section_input">
+        <section class="section-input">
             <div>
-                <input required type="text" name="" id="empresa_nome">
-                <label for="empresa_nome"> Nome da empresa </label>
+                <input required type="text" name="" id="empresa-nome">
+                <label for="empresa-nome"> Nome da empresa </label>
             </div>
             <div>
-                <input required type="text" name="" id="empresa_hora">
-                <label for="empresa_hora"> Horario </label>
+                <input required type="text" name="" id="empresa-hora">
+                <label for="empresa-hora"> Horario </label>
             </div> 
             <div>
-                <input required type="text" name="" id="empresa_descricao">
-                <label for="empresa_descricao"> Descrição </label>
+                <input required type="text" name="" id="empresa-descricao">
+                <label for="empresa-descricao"> Descrição </label>
             </div> 
             
             <div>
                 <select name="" id="setores">
                     <option selected disabled value="">Setores</option>
                 </select>
-                <button id="btn_criar_empresa">Criar</button>
+                <button id="botao_criar_empresa">Criar</button>
             </div>
         </section>
     </section>
