@@ -53,7 +53,6 @@ class Admin {
         const tipo = document.createElement('p');
         const listaDepartamentos = document.createElement('section');
         const departamento = document.createElement('h3');
-        const ul = document.createElement('ul');
         modalEmpresa.addEventListener('click', event => {
             body.removeChild(event.target);
         });
