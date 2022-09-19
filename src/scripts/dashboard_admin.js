@@ -30,7 +30,7 @@ class Admin {
         img.alt = 'icone'
         div2.classList = "description"
         li.addEventListener('click', async (event) => {
-            this.openModal(empresa)
+            this.abrirModal(empresa)
         })
         div3.append(h3, p2)
         div2.append(div3)
@@ -39,7 +39,7 @@ class Admin {
         li.append(figure, div2)
         return li
     }
-    static async openModal(empresa){
+    static async abrirModal(empresa){
         const body = document.querySelector('body');
         const modalEmpresa = document.createElement('section');
         const modalDiv = document.createElement('div');
