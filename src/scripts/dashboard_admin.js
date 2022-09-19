@@ -82,7 +82,6 @@ class Admin {
 
         body.append(modalEmpresa);
     }
-
     static async obterDepartamentos(id){
         const departamento = await Api.listarDepartamentos(id)
         const lista = document.createElement('ul')
